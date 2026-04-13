@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enroll</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<nav>
+  <h1>FAITH BAPTIST CHURCH SCHOOL</h1>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="enroll.html">Enroll</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Student Enrollment</h2>
+
+<form id="enroll-form" action="https://formspree.io/f/mjgpyazv" method="POST">
+  
+  <input type="text" name="student_firstname" placeholder="Student First Name" required>
+  
+  <input type="text" name="student_lastname" placeholder="Student Last Name" required>
+  
+  <input type="text" name="parent_firstname" placeholder="Parent First Name" required>
+  
+  <input type="text" name="parent_lastname" placeholder="Parent Last Name" required>
+
+  <input type="text" name="relationship" placeholder="Relationship to Student" required>
+
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+
+  <input type="text" name="address" placeholder="Home Address" required>#
+
+  <input type="email" name="email" placeholder="Email" required>
+  
+  <input type="number" name="age" placeholder="Age" required>
+
+  <input type="text" name="grade" placeholder="Grade Applying For" required>
+
+  <input type="text" name="previous_school" placeholder="Previous School (if any)">
+
+  <input type="text" name="reason" placeholder="Why do you want to enroll?" required>
+
+  <input type="text" name="hear_about" placeholder="How did you hear about us?">
+
+  <input type="text" name="additional_info" placeholder="Additional Information">
+
+  <!-- Consent Checkbox -->
+  <label>
+    <input type="checkbox" name="consent" required>
+    I consent to the processing of this enrollment information.
+  </label>
+
+  <!-- Subject -->
+  <input type="hidden" name="_subject" value="New Student Enrollment">
+  
+
+  <!-- Honeypot (anti-spam trap) -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <!-- reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+<button class="btn" type="submit">Submit Enrollment</button>
+
+<p id="enroll-status"></p>
+</form>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<footer>© 2026 Faith Baptist Church School</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
